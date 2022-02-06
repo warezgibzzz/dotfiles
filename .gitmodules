@@ -1,0 +1,3 @@
+[submodule "ulauncher/user-themes/solarized-dark"]
+	path = ulauncher/user-themes/solarized-dark
+	url = https://github.com/ztychr/solarized-dark-ulauncher

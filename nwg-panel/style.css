@@ -1,0 +1,110 @@
+@import './colors.css';
+
+* {
+    font-size: 10px;
+    font-family: monospace;
+}
+
+/* Recommended if panel "height" unset or smaller then your theme default button height */
+button {
+    margin: 2px
+}
+
+/* SwayTaskBar and SwayWorkspaces use custom widgets, that need this and the next name
+   to highlight currently focused task / workspace. */
+#task-box {
+    padding-left: 4px;
+    padding-right: 4px
+}
+
+#task-box-focused {
+    background-color: rgba (255, 255, 255, 0.12);
+    padding-left: 4px;
+    padding-right: 4px
+}
+
+
+/***** MODIFY TO YOUR TASTE *****/
+
+/* Sample button in sample config w/ no background nor border */
+#button-custom {
+    background: rgba (0, 0, 0, 0.0);
+    border: 0
+}
+
+/* Top panel in sample config uses this name */
+#panel-top {
+    background: var(--base03);
+    color: var(--base0);
+    border-bottom: 1px solid var(--green);
+}
+
+/* Bottom panel in sample config uses this name */
+#panel-bottom {
+    background: var(--base03);
+    color: var(--base0);
+}
+
+/* Controls window in sample config uses this name */
+#controls-window {
+    border: 1px solid var(--base02);
+    background: var(--base03);
+    color: var(--base00);
+}
+
+/* Executors usually behave better in monospace fonts */
+#executor-label {
+    font-family: MesloLGS NF
+}
+
+/* and so does the Clock */
+#clock {
+    font-family: MesloLGS NF;
+    font-size: 16px;
+    border-radius: 2px;
+}
+
+/* Sample executor-weather uses "css-name": "weather" */
+#weather {
+    font-size: 16px;
+    border-radius: 2px;
+}
+
+#lang {
+    border-radius: 2px;
+}
+
+/* dwl-tags module */
+#dwl-tag-box {
+	padding-top: 4px;
+	padding-bottom: 4px
+}
+
+#dwl-tag-occupied {
+	font-family: MesloLGS NF;
+	color: #eee;
+	background-color: #006699;
+	padding-left: 3px;
+	padding-right: 3px;
+}
+
+#dwl-tag-free {
+	font-family: MesloLGS NF;
+	color: #eee;
+    background-color: rgba (32, 50, 90, 1.0);
+    padding-left: 3px;
+    padding-right: 3px;
+}
+
+#dwl-tag-urgent {
+	font-family: MesloLGS NF;
+	color: #eee;
+    background-color: #ee6600;
+    padding-left: 3px;
+    padding-right: 3px;
+}
+
+#dwl-tag-selected {
+	border: solid 2px;
+	border-color: #81a1c1
+}

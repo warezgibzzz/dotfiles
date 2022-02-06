@@ -1,0 +1,401 @@
+[
+  {
+    "name": "top",
+    "output": "",
+    "layer": "bottom",
+    "position": "top",
+    "controls": "right",
+    "width": "auto",
+    "height": 20,
+    "margin-top": 2,
+    "margin-bottom": 2,
+    "padding-horizontal": 2,
+    "padding-vertical": 2,
+    "spacing": 0,
+    "items-padding": 0,
+    "icons": "",
+    "css-name": "panel-top",
+    "modules-left": [
+      "button-files",
+      "playerctl"
+    ],
+    "modules-center": [],
+    "modules-right": [
+      "executor-lang",
+      "executor-arch",
+      "executor-weather",
+      "clock"
+    ],
+    "controls-settings": {
+      "components": [
+        "volume",
+        "net"
+      ],
+      "commands": {
+        "net": "",
+        "bluetooth": "",
+        "battery": ""
+      },
+      "show-values": false,
+      "interval": 1,
+      "icon-size": 16,
+      "hover-opens": false,
+      "leave-closes": true,
+      "css-name": "controls-window",
+      "net-interface": "",
+      "custom-items": [
+        {
+          "name": "Panel settings",
+          "icon": "nwg-panel",
+          "cmd": "nwg-panel-config"
+        }
+      ],
+      "menu": {
+        "name": "Exit",
+        "icon": "system-shutdown-symbolic",
+        "items": [
+          {
+            "name": "Lock",
+            "cmd": "swaylock -f -c 000000"
+          },
+          {
+            "name": "Logout",
+            "cmd": "swaymsg exit"
+          },
+          {
+            "name": "Reboot",
+            "cmd": "systemctl reboot"
+          },
+          {
+            "name": "Shutdown",
+            "cmd": "systemctl -i poweroff"
+          }
+        ]
+      },
+      "output-switcher": true,
+      "window-width": 0,
+      "window-margin": 0,
+      "root-css-name": "controls-overview",
+      "backlight-device": ""
+    },
+    "sway-taskbar": {
+      "workspace-menu": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8"
+      ],
+      "name-max-len": 20,
+      "image-size": 16,
+      "workspaces-spacing": 0,
+      "task-padding": 0,
+      "show-app-icon": true,
+      "show-app-name": true,
+      "show-layout": true,
+      "workspace-buttons": true,
+      "all-workspaces": true,
+      "all-outputs": false
+    },
+    "sway-workspaces": {
+      "numbers": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8"
+      ]
+    },
+    "clock": {
+      "format": "%d.%m.%Y  %H:%M:%S",
+      "tooltip-text": "",
+      "on-left-click": "pkill -f -14 nwg-wrapper",
+      "on-middle-click": "",
+      "on-right-click": "",
+      "on-scroll-up": "",
+      "on-scroll-down": "",
+      "css-name": "clock",
+      "interval": 1,
+      "root-css-name": "root-clock"
+    },
+    "playerctl": {
+      "buttons-position": "left",
+      "icon-size": 16,
+      "chars": 50,
+      "button-css-name": "",
+      "label-css-name": "",
+      "interval": 1
+    },
+    "menu-start": "left",
+    "scratchpad": {},
+    "executor-lang": {
+      "script": "/home/gitolite/.config/nwg-panel/executors/lang.sh",
+      "tooltip-text": "Language",
+      "on-left-click": "swaymsg input \"2522:64020:COMPANY__USB_Device__Keyboard\" xkb_switch_layout next",
+      "on-middle-click": "",
+      "on-right-click": "",
+      "on-scroll-up": "",
+      "on-scroll-down": "",
+      "root-css-name": "",
+      "css-name": "lang",
+      "icon-placement": "left",
+      "icon-size": 18,
+      "interval": 1
+    },
+    "button-files": {
+      "command": "nautilus",
+      "icon": "green-folder",
+      "label": "",
+      "label-position": "right",
+      "css-name": "",
+      "icon-size": 16
+    },
+    "executor-weather": {
+      "script": "curl https://wttr.in/Saint+Petersburg?format=1 -s",
+      "tooltip-text": "",
+      "on-left-click": "pkill -f -13 nwg-wrapper",
+      "on-middle-click": "",
+      "on-right-click": "",
+      "on-scroll-up": "",
+      "on-scroll-down": "",
+      "root-css-name": "",
+      "css-name": "weather",
+      "icon-placement": "left",
+      "icon-size": 16,
+      "interval": 3599
+    },
+    "executor-arch": {
+      "script": "/home/gitolite/.config/nwg-panel/executors/arch_updates.py",
+      "tooltip-text": "Software updates",
+      "on-left-click": "kitty -e \"/home/gitolite/.config/nwg-panel/executors/au.sh\"",
+      "on-middle-click": "",
+      "on-right-click": "",
+      "on-scroll-up": "",
+      "on-scroll-down": "",
+      "root-css-name": "",
+      "css-name": "",
+      "icon-placement": "left",
+      "icon-size": 18,
+      "interval": 1
+    }
+  },
+  {
+    "name": "panel-bottom",
+    "output": "",
+    "layer": "bottom",
+    "position": "bottom",
+    "controls": "off",
+    "width": "auto",
+    "height": 30,
+    "margin-top": 0,
+    "margin-bottom": 0,
+    "padding-horizontal": 6,
+    "padding-vertical": 0,
+    "spacing": 0,
+    "items-padding": 0,
+    "icons": "",
+    "css-name": "panel-bottom",
+    "modules-left": [
+      "sway-workspaces"
+    ],
+    "modules-center": [],
+    "modules-right": [
+      "executor-mem",
+      "executor-cpu",
+      "executor-uptime",
+      "executor-hdd"
+    ],
+    "controls-settings": {
+      "components": [
+        "net",
+        "brightness",
+        "volume",
+        "battery"
+      ],
+      "commands": {
+        "net": "",
+        "bluetooth": "",
+        "battery": ""
+      },
+      "show-values": false,
+      "interval": 1,
+      "icon-size": 16,
+      "hover-opens": true,
+      "leave-closes": true,
+      "css-name": "controls-window",
+      "net-interface": "",
+      "custom-items": [
+        {
+          "name": "Panel settings",
+          "icon": "nwg-panel",
+          "cmd": "nwg-panel-config"
+        }
+      ],
+      "menu": {
+        "name": "unnamed",
+        "icon": "",
+        "items": []
+      }
+    },
+    "sway-taskbar": {
+      "workspace-menu": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8"
+      ],
+      "name-max-len": 20,
+      "image-size": 16,
+      "workspaces-spacing": 0,
+      "task-padding": 0,
+      "show-app-icon": true,
+      "show-app-name": true,
+      "show-layout": true,
+      "workspace-buttons": false,
+      "all-workspaces": true,
+      "all-outputs": false
+    },
+    "sway-workspaces": {
+      "numbers": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8"
+      ]
+    },
+    "clock": {
+      "format": "%a, %d. %b  %H:%M:%S",
+      "tooltip-text": "",
+      "on-left-click": "",
+      "on-middle-click": "",
+      "on-right-click": "",
+      "on-scroll-up": "",
+      "on-scroll-down": "",
+      "css-name": "clock",
+      "interval": 1
+    },
+    "playerctl": {
+      "buttons-position": "left",
+      "icon-size": 16,
+      "chars": 30,
+      "button-css-name": "",
+      "label-css-name": "",
+      "interval": 1
+    },
+    "executor-weather": {
+      "script": "curl https://wttr.in/Saint+Petersburg?format=1 -s",
+      "interval": 1800,
+      "css-name": "weather",
+      "on-right-click": "",
+      "icon-size": 16,
+      "show-icon": true,
+      "tooltip-text": "",
+      "on-left-click": "",
+      "on-middle-click": "",
+      "on-scroll-up": "",
+      "on-scroll-down": "",
+      "root-css-name": "",
+      "icon-placement": "left"
+    },
+    "menu-start": "off",
+    "scratchpad": {},
+    "executor-cpu": {
+      "script": "gopsuinfo -i a",
+      "tooltip-text": "",
+      "on-left-click": "",
+      "on-middle-click": "",
+      "on-right-click": "",
+      "on-scroll-up": "",
+      "on-scroll-down": "",
+      "root-css-name": "",
+      "css-name": "",
+      "icon-placement": "left",
+      "icon-size": 16,
+      "interval": 1
+    },
+    "executor-ram": {
+      "script": "gopsuinfo -i g",
+      "tooltip-text": "",
+      "on-left-click": "",
+      "on-middle-click": "",
+      "on-right-click": "",
+      "on-scroll-up": "",
+      "on-scroll-down": "",
+      "root-css-name": "",
+      "css-name": "",
+      "icon-placement": "left",
+      "icon-size": 16,
+      "interval": 1
+    },
+    "executor-temp": {
+      "script": "gopsuinfo -i t",
+      "tooltip-text": "",
+      "on-left-click": "",
+      "on-middle-click": "",
+      "on-right-click": "",
+      "on-scroll-up": "",
+      "on-scroll-down": "",
+      "root-css-name": "",
+      "css-name": "",
+      "icon-placement": "left",
+      "icon-size": 16,
+      "interval": 1
+    },
+    "executor-mem": {
+      "script": "gopsuinfo -i m",
+      "tooltip-text": "",
+      "on-left-click": "kitty -e htop",
+      "on-middle-click": "",
+      "on-right-click": "",
+      "on-scroll-up": "",
+      "on-scroll-down": "",
+      "root-css-name": "",
+      "css-name": "",
+      "icon-placement": "left",
+      "icon-size": 16,
+      "interval": 1
+    },
+    "executor-hdd": {
+      "script": "gopsuinfo -i n",
+      "tooltip-text": "",
+      "on-left-click": "",
+      "on-middle-click": "",
+      "on-right-click": "",
+      "on-scroll-up": "",
+      "on-scroll-down": "",
+      "root-css-name": "",
+      "css-name": "",
+      "icon-placement": "left",
+      "icon-size": 16,
+      "interval": 1
+    },
+    "executor-uptime": {
+      "script": "gopsuinfo -i u",
+      "tooltip-text": "",
+      "on-left-click": "",
+      "on-middle-click": "",
+      "on-right-click": "",
+      "on-scroll-up": "",
+      "on-scroll-down": "",
+      "root-css-name": "",
+      "css-name": "",
+      "icon-placement": "left",
+      "icon-size": 16,
+      "interval": 1
+    }
+  }
+]

@@ -1,0 +1,18 @@
+window {
+        background-color: rgba (0, 0, 0, 0.0);
+        opacity: .85;
+}
+
+#box-outer {
+        /* Define attributes of the box surrounding icons here */
+        background-color: rgba (255, 255, 255, 0.0)
+}
+
+#box-inner {
+        font-family: MesloLGS NF;
+        background-color: #073642;
+        color: #839496;
+        border-radius: 2px;
+        border: 1px solid #859900;
+	padding: 10px
+}

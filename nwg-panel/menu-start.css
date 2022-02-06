@@ -1,0 +1,26 @@
+@import './colors.css';
+
+window {
+    background-color: var(--base03);
+    border: 1px solid var(--green);
+    border-width: 0 1px 1px 0;
+    color: var(--base1);
+    min-height: 450px;
+}
+
+list {
+    background: none;
+}
+
+entry {
+    background-color: var(--base02);
+}
+
+button {
+    background: none;
+    border: none
+}
+
+button:hover {
+    background-color: var(--green);
+}
