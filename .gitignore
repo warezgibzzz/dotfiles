@@ -15,10 +15,13 @@
 !nwg-wrapper/**/*
 !sway
 !sway/*
+!sway/**/*
 !systemd
 !systemd/*
+!systemd/**/*
 !ulauncher
 !ulauncher/*
+!ulauncher/**/*
 !wallpaper.png
 !example.png
 !.gitignore
