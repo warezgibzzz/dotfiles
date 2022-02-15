@@ -9,8 +9,10 @@
 !mako/*
 !nwg-panel
 !nwg-panel/*
+!nwg-panel/**/*
 !nwg-wrapper
 !nwg-wrapper/*
+!nwg-wrapper/**/*
 !sway
 !sway/*
 !systemd
@@ -20,3 +22,5 @@
 !wallpaper.png
 !example.png
 !.gitignore
+!Code - OSS/User/settings.json
+ulauncher/user-themes/solarized-dark/generated.css

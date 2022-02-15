@@ -24,6 +24,7 @@
       "executor-lang",
       "executor-arch",
       "executor-weather",
+      "tray",
       "clock"
     ],
     "controls-settings": {
@@ -183,7 +184,9 @@
       "icon-placement": "left",
       "icon-size": 18,
       "interval": 1
-    }
+    },
+    "dwl-tags": {},
+    "tray": {}
   },
   {
     "name": "panel-bottom",
